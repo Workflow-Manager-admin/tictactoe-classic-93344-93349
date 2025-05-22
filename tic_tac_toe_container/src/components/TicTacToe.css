@@ -1,0 +1,94 @@
+.tic-tac-toe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 400px;
+  padding: 1.5rem;
+  background-color: var(--kavia-dark);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tic-tac-toe h2 {
+  color: var(--kavia-orange);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.game-status {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  background-color: var(--kavia-dark);
+  border: 2px solid var(--border-color);
+  margin: 2px;
+  color: var(--text-color);
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.square:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.square:focus {
+  outline: none;
+  border-color: var(--kavia-orange);
+}
+
+/* Styles for X and O */
+.square:nth-child(odd):not(:empty) {
+  color: var(--kavia-orange);
+}
+
+.square:nth-child(even):not(:empty) {
+  color: var(--text-color);
+}
+
+.reset-button {
+  margin-top: 1rem;
+  padding: 10px 24px;
+  background-color: var(--kavia-orange);
+  transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+  background-color: #FF8B4D;
+}
+
+@media (max-width: 480px) {
+  .square {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+}
